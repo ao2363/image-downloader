@@ -1,0 +1,25 @@
+{
+   "background": {
+      "service_worker": "src/background/background.js",
+      "type": "module"
+   },
+   "action": {
+      "default_icon": "/images/icon_128.png",
+      "default_popup": "/src/Popup/index.html"
+   },
+   "description": "Browse and download images on the web",
+   "icons": {
+      "128": "/images/icon_128.png",
+      "16": "/images/icon_16.png",
+      "48": "/images/icon_48.png"
+   },
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "画像一括DL",
+   "permissions": [ "activeTab", "downloads", "storage", "scripting" ],
+   "host_permissions": [ "http://*/*", "https://*/*" ],
+   "version": "1.0.0",
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   }
+}
